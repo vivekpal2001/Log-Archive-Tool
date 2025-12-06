@@ -24,7 +24,18 @@ archiveName="log_archive_$timestamp.tar.gz"
 echo "📦 Compressing logs from: $dirPath"
 tar -czf "$archiveDir/$archiveName" "$dirPath"
 
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to create archive."
+if [ $? -eq 0 ]; then
+    # Get file size
+    size=$(ls -lh "$archivePath" | awk '{print $5}')
+    
+    echo "✅ Archive created successfully!"
+    echo "📁 Location: $archivePath"
+    echo "📊 Size: $size"
+    
+    # Log the operation
+    echo "[${timestamp}] Archived: $(basename "$dirPath") -> ${archiveName} (${size})" >> "$archiveDir/archive.log"
+    
+else
+    echo "❌ Failed to create archive"
     exit 1
 fi
