@@ -85,19 +85,7 @@ Contributions are welcome! Feel free to:
 
 roadmap.sh link :- https://roadmap.sh/projects/log-archive-tool
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Author
-
-**Vivek Pal**
-- GitHub: [@vivekpal2001](https://github.com/vivekpal2001)
-
 ## Acknowledgments
 
 Built as a practical DevOps utility for log management and backup automation.
 
----
-
-⭐ If you find this tool useful, please consider giving it a star!
