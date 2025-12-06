@@ -26,10 +26,10 @@ tar -czf "$archiveDir/$archiveName" "$dirPath"
 
 if [ $? -eq 0 ]; then
     # Get file size
-    size=$(ls -lh "$archivePath" | awk '{print $5}')
+    size=$(ls -lh "$archiveDir/$archiveName" | awk '{print $5}')
     
     echo "✅ Archive created successfully!"
-    echo "📁 Location: $archivePath"
+    echo "📁 Location: $archiveDir"
     echo "📊 Size: $size"
     
     # Log the operation
